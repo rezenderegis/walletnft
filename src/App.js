@@ -2,22 +2,32 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const connectWallet = async () => {
+
+
+
+
+    //Exactly the cole of Metamask Documentation 
+    //https://docs.metamask.io/guide/getting-started.html#basic-considerations
+
+    if (typeof window.ethereum !== 'undefined') {
+
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+
+      debugger
+    }
+
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        Account
+      </div>
+      <button className='connect-wallet' onClick={connectWallet}>
+        Connect Wallet
+      </button>
     </div>
   );
 }
