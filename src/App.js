@@ -37,15 +37,16 @@ function App() {
 
     //https://api.rarible.org/v0.1/doc#operation/getItemsByOwnerWithOwnership
 
-   // const response = await fetch(`https://api.rarible.org/v0.1/items/byOwner/?owner=ETHEREUM:${getWalletAddress}`);
+    const response = await fetch(`https://api.rarible.org/v0.1/items/byOwner/?owner=ETHEREUM:${getWalletAddress}`);
+   // const response = await fetch(`https://api.rarible.org/v0.1/items/byOwner/?owner=ETHEREUM:0xB7f9E960b89a7a96f41A7555Ec57aaB4bc3b85ca`);
 
-    const response = await fetch(`https://api.rarible.org/v0.1/items/byOwner/?owner=ETHEREUM:0x60f80121c31a0d46b5279700f9df786054aa5ee5`);
+   // const response = await fetch(`https://api.rarible.org/v0.1/items/byOwner/?owner=ETHEREUM:0x60f80121c31a0d46b5279700f9df786054aa5ee5`);
 
     const data = await response.json();
 
     setNfts(data.items)
 
-    debugger
+    //debugger
      
   }
 

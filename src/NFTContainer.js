@@ -1,12 +1,13 @@
 
 import React from 'react';
 import NFTCard from './NFTCard';
+import './App.css';
 
 export const NFTContainer = ({nfts}) => {
 
     
   return (
-    <div>
+      <div className='nft-container'>
 
     {
         nfts.map((nft,index) => {
